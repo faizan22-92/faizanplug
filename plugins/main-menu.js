@@ -17,13 +17,13 @@ const toSmallCaps = (text) => {
     return text.toLowerCase().split('').map(char => smallCapsMap[char] || char).join('');
 };
 
-// --- CUTE QUEEN CATEGORY STYLE ---
+// --- FAIZAN CATEGORY STYLE ---
 const formatCategory = (category, cmds) => {
     const validCmds = cmds.filter(cmd => cmd.pattern && cmd.pattern.trim() !== '');
     if (validCmds.length === 0) return ''; 
     
-    let title = `\n╭━━━⪨ 🌸 *${category.toUpperCase()}* 🌸 ⪩━━━╮\n`;
-    let body = validCmds.map(cmd => `  🌸 ‣ \`.${toSmallCaps(cmd.pattern)}\``).join('\n');
+    let title = `\n╭━━━⪨ ⚡ *${category.toUpperCase()}* ⚡ ⪩━━━╮\n`;
+    let body = validCmds.map(cmd => `  ⚡ ‣ \`.${toSmallCaps(cmd.pattern)}\``).join('\n');
     let footer = `\n╰━━━━━━━━━━━━━━━━━━━━━━╯\n`;
     return `${title}${body}${footer}`;
 };
@@ -32,7 +32,7 @@ cmd({
     pattern: "menu",
     alias: ["m", "help", "allmenu"],
     category: "main",
-    react: "🎀",
+    react: "🔥",
     filename: __filename
 },
 async (conn, mek, m, { from, pushname, reply }) => {
@@ -44,24 +44,24 @@ async (conn, mek, m, { from, pushname, reply }) => {
             menuSections += formatCategory(cat, catCmds);
         });
 
-        const BOT_NAME = "QUEEN-MD";
+        const BOT_NAME = "FAIZAN-MD";
         const uptime = runtime(process.uptime());
 
-        // --- CUTE PRINCESS INTERFACE DESIGN ---
+        // --- FAIZAN INTERFACE DESIGN ---
         let dec = `
-╭━━━⪨ 🎀 𝐐𝐔𝐄𝐄𝐍 𝐌𝐃 🎀 ⪩━━━╮
+╭━━━⪨ ⚡ 𝐅𝐀𝐈𝐙𝐀𝐍 𝐌𝐃 ⚡ ⪩━━━╮
   
-  👑 ‣ 𝐎𝐰𝐧𝐞𝐫  : ${config.OWNER_NAME || "Queen Owner"}
+  👑 ‣ 𝐎𝐰𝐧𝐞𝐫  : ${config.OWNER_NAME || "Faizan"}
   ⏰ ‣ 𝐔𝐩𝐭𝐢𝐦𝐞 : ${uptime}
   📂 ‣ 𝐂𝐦𝐝𝐬   : ${Object.keys(commands).length}
   🦋 ‣ 𝐌𝐨𝐝𝐞   : ${config.MODE || "Public"}
-  💖 ‣ 𝐒𝐭𝐚𝐭𝐮𝐬 : Active & Cute 💕
+  💖 ‣ 𝐒𝐭𝐚𝐭𝐮𝐬 : Active & Online 🔥
 
 ╰━━━━━━━━━━━━━━━━━━━━━━╯
 ${menuSections}
-> 🎀 *ᴘᴏᴡᴇʀᴇᴅ ʙʏ QUEEN🦋*`;
+> ⚡ *ᴘᴏᴡᴇʀᴇᴅ ʙʏ FAIZAN⚡*`;
 
-        // Updated Custom Image Link
+        // Main Image Link
         const mainImage = "https://files.catbox.moe/15j4gb.jpg";
 
         // 1. Menu Image Send
@@ -73,8 +73,8 @@ ${menuSections}
                 forwardingScore: 999, 
                 isForwarded: true, 
                 forwardedNewsletterMessageInfo: { 
-                    newsletterJid: '120363429017707564@newsletter', 
-                    newsletterName: "QUEEN-MD TECH 🦋", 
+                    newsletterJid: '120363430083423038@newsletter', 
+                    newsletterName: "FAIZAN-MD TECH ⚡", 
                     serverMessageId: 143 
                 } 
             } 
@@ -91,3 +91,4 @@ ${menuSections}
         reply(`⚠️ Error: ${e.message}`); 
     } 
 });
+                            
