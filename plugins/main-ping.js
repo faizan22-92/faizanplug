@@ -7,8 +7,8 @@ const { runtime } = require('../lib/functions');
 const axios = require('axios');
 
 // Constant Channel JID & Name (Har jaga yahi use hoga)
-const CHANNEL_JID = '120363429017707564@newsletter';
-const CHANNEL_NAME = "QUEEN-MD TECH 🦋";
+const CHANNEL_JID = '120363430083423038@newsletter';
+const CHANNEL_NAME = "FAIZAN-MD TECH ⚡";
 const MAIN_IMAGE = "https://files.catbox.moe/15j4gb.jpg";
 
 // Helper function for small caps text
@@ -22,13 +22,13 @@ const toSmallCaps = (text) => {
     return text.toLowerCase().split('').map(char => smallCapsMap[char] || char).join('');
 };
 
-// --- CUTE QUEEN CATEGORY STYLE ---
+// --- FAIZAN CATEGORY STYLE ---
 const formatCategory = (category, cmds) => {
     const validCmds = cmds.filter(cmd => cmd.pattern && cmd.pattern.trim() !== '');
     if (validCmds.length === 0) return ''; 
     
-    let title = `\n╭━━━⪨ 🌸 *${category.toUpperCase()}* 🌸 ⪩━━━╮\n`;
-    let body = validCmds.map(cmd => `  🌸 ‣ \`.${toSmallCaps(cmd.pattern)}\``).join('\n');
+    let title = `\n╭━━━⪨ ⚡ *${category.toUpperCase()}* ⚡ ⪩━━━╮\n`;
+    let body = validCmds.map(cmd => `  ⚡ ‣ \`.${toSmallCaps(cmd.pattern)}\``).join('\n');
     let footer = `\n╰━━━━━━━━━━━━━━━━━━━━━━╯\n`;
     return `${title}${body}${footer}`;
 };
@@ -40,14 +40,14 @@ cmd({
     use: '.ping',
     desc: "Check bot's response time.",
     category: "main",
-    react: "🎀",
+    react: "🔥",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, sender, reply }) => {
     try {
         const start = Date.now();
 
-        const reactionEmojis = ['🎀', '👑', '🌸', '🦋', '💖', '✨'];
+        const reactionEmojis = ['⚡', '👑', '🔥', '🚀', '💥', '✨'];
         const reactionEmoji = reactionEmojis[Math.floor(Math.random() * reactionEmojis.length)];
 
         await conn.sendMessage(from, {
@@ -58,16 +58,16 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         const responseTime = end - start;
 
         const text = `
-╭━━━⪨ 🎀 𝐐𝐔𝐄𝐄𝐍 𝐌𝐃 🎀 ⪩━━━╮
+╭━━━⪨ ⚡ 𝐅𝐀𝐈𝐙𝐀𝐍 𝐌𝐃 ⚡ ⪩━━━╮
   
-  🌸 ‣ 𝐒𝐩𝐞𝐞𝐝 : \`${responseTime} ms\`
-  🎀 ‣ 𝐒𝐭𝐚𝐭𝐮𝐬 : Active & Cute 💕
-  🦋 ‣ 𝐌𝐨𝐝𝐞   : VIP Princess
-  💖 ‣ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 : 100% Smooth
+  ⚡ ‣ 𝐒𝐩𝐞𝐞𝐝 : \`${responseTime} ms\`
+  🔥 ‣ 𝐒𝐭𝐚𝐭𝐮𝐬 : Active & Fast ⚡
+  👑 ‣ 𝐌𝐨𝐝𝐞   : VIP User
+  🚀 ‣ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 : 100% Smooth
 
 ╰━━━━━━━━━━━━━━━━━━━━━━╯
 
-> 🎀 *ᴘᴏᴡᴇʀᴇᴅ ʙʏ QUEEN🦋*`;
+> ⚡ *ᴘᴏᴡᴇʀᴇᴅ ʙʏ FAIZAN⚡*`;
 
         await conn.sendMessage(from, {
             text: text.trim(),
@@ -94,7 +94,7 @@ cmd({
     pattern: "ping2",
     desc: "Check bot's response time with dashboard view.",
     category: "main",
-    react: "🦋",
+    react: "⚡",
     filename: __filename
 },
 async (conn, mek, m, { from, reply }) => {
@@ -118,16 +118,16 @@ async (conn, mek, m, { from, reply }) => {
         }
 
         const msg = `
-╭━━━⪨ 🦋 𝐐𝐔𝐄𝐄𝐍 𝐌𝐃 🦋 ⪩━━━╮
+╭━━━⪨ ⚡ 𝐅𝐀𝐈𝐙𝐀𝐍 𝐌𝐃 ⚡ ⪩━━━╮
   
   📡 ‣ 𝐋𝐚𝐭𝐞𝐧𝐜𝐲 : \`${ping} ms\`
   🧠 ‣ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 : ${status} ${indicator}
-  ⚡ ‣ 𝐄𝐧𝐠𝐢𝐧𝐞  : Super Fast 💕
+  ⚡ ‣ 𝐄𝐧𝐠𝐢𝐧𝐞  : Super Fast 🔥
   👑 ‣ 𝐌𝐨𝐝𝐞    : VIP Active
 
 ╰━━━━━━━━━━━━━━━━━━━━━━╯
 
-> 🎀 *ᴘᴏᴡᴇʀᴇ丁 ʙʏ QUEEN🦋*`;
+> ⚡ *ᴘᴏᴡᴇʀᴇᴅ ʙʏ FAIZAN⚡*`;
 
         await conn.sendMessage(from, { 
             text: msg.trim(),
@@ -153,7 +153,7 @@ cmd({
     pattern: "menu",
     alias: ["m", "help", "allmenu"],
     category: "main",
-    react: "🎀",
+    react: "🔥",
     filename: __filename
 },
 async (conn, mek, m, { from, pushname, reply }) => {
@@ -168,17 +168,17 @@ async (conn, mek, m, { from, pushname, reply }) => {
         const uptime = runtime(process.uptime());
 
         let dec = `
-╭━━━⪨ 🎀 𝐐𝐔𝐄𝐄𝐍 𝐌𝐃 🎀 ⪩━━━╮
+╭━━━⪨ ⚡ 𝐅𝐀𝐈𝐙𝐀𝐍 𝐌𝐃 ⚡ ⪩━━━╮
   
-  👑 ‣ 𝐎𝐰𝐧𝐞𝐫  : ${config.OWNER_NAME || "Queen Owner"}
+  👑 ‣ 𝐎𝐰𝐧𝐞𝐫  : ${config.OWNER_NAME || "Faizan"}
   ⏰ ‣ 𝐔𝐩𝐭𝐢𝐦𝐞 : ${uptime}
   📂 ‣ 𝐂𝐦𝐝𝐬   : ${Object.keys(commands).length}
-  🦋 ‣ 𝐌𝐨𝐝𝐞   : ${config.MODE || "Public"}
-  💖 ‣ 𝐒𝐭𝐚𝐭𝐮𝐬 : Active & Cute 💕
+  ⚡ ‣ 𝐌𝐨𝐝𝐞   : ${config.MODE || "Public"}
+  🔥 ‣ 𝐒𝐭𝐚𝐭𝐮𝐬 : Active & Fast ⚡
 
 ╰━━━━━━━━━━━━━━━━━━━━━━╯
 ${menuSections}
-> 🎀 *ᴘᴏᴡᴇʀᴇᴅ ʙʏ QUEEN🦋*`;
+> ⚡ *ᴘᴏᴡᴇʀᴇᴅ ʙʏ FAIZAN⚡*`;
 
         // 1. Menu Image Send
         await conn.sendMessage(from, { 
@@ -207,3 +207,4 @@ ${menuSections}
         reply(`⚠️ Error: ${e.message}`); 
     } 
 });
+            
