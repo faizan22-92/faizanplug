@@ -62,7 +62,7 @@ ${menuSections}
 > ⚡ *ᴘᴏᴡᴇʀᴇᴅ ʙʏ FAIZAN⚡*`;
 
         // Main Image Link
-        const mainImage = "https://files.catbox.moe/15j4gb.jpg";
+        const mainImage = "https://files.catbox.moe/12pwyf.jpg";
 
         // 1. Menu Image Send
         await conn.sendMessage(from, { 
@@ -82,7 +82,7 @@ ${menuSections}
 
         // 2. Audio File Send
         await conn.sendMessage(from, {
-            audio: { url: "https://files.catbox.moe/yfyuyk.mp3" },
+            audio: { url: "https://files.catbox.moe" },
             mimetype: 'audio/mpeg',
             ptt: false
         }, { quoted: mek });
