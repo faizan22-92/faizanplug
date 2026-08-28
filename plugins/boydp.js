@@ -26,7 +26,7 @@ const boyDpUrls = {
     url22: 'https://files.catbox.moe/yfce44.jpg'
 };
 
-const caption = `*_Powered by 𝐀͢ͱ꧊ϻ͒͜𝛂͜𝛛🚩_*`;
+const caption = `*_Powered by FAIZAN SIAL🚩_*`;
 
 // Boy DP 1
 cmd({ pattern: "boydp1", desc: "Send boy DP 1", category: "boydp", react: "👦", filename: __filename },
