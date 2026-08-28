@@ -26,7 +26,7 @@ const boyDpUrls = {
     url22: 'https://files.catbox.moe/yfce44.jpg'
 };
 
-const caption = `*_Powered by FAIZAN SIAL🚩_*`;
+const caption = `*_Powered by FAIZAN MD🚩_*`;
 
 // Boy DP 1
 cmd({ pattern: "boydp1", desc: "Send boy DP 1", category: "boydp", react: "👦", filename: __filename },
@@ -203,3 +203,4 @@ async (conn, mek, m, { from, reply }) => {
         await conn.sendMessage(from, { image: { url: boyDpUrls.url22 }, mimetype: 'image/jpeg', caption }, { quoted: mek });
     } catch (e) { console.error("Error in boydp22:", e); await reply("Failed to send image."); }
 });
+                      
