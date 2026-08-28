@@ -30,7 +30,7 @@ async (conn, mek, m, { from, reply }) => {
         // Sending the image with caption
         await conn.sendMessage(from, { 
             image: { url: randomImage }, 
-            caption: "*_FUCK YOU BABY 🍼🥵_*" 
+            caption: "*_FUCK YOU BABY BY FAIZAN 🍼🥵_*" 
         }, { quoted: mek });
 
     } catch (e) {
