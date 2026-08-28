@@ -30,7 +30,7 @@ coupleUrls.forEach((url, index) => {
         try {
             await conn.sendMessage(from, { 
                 image: { url: url }, 
-                caption: `*Anime Couple ${index + 1}*\n\n*_powered by 𝐀͢ͱ꧊ϻ͒͜𝛂͜𝛛🚩_*` 
+                caption: `*Anime Couple ${index + 1}*\n\n*_powered by 𝐅𝐀𝐈𝐙𝐀𝐍 𝐒𝐈𝐀𝐋🚩_*` 
             }, { quoted: mek });
         } catch (e) {
             console.error(`Error in animecouple${index + 1} command:`, e);
@@ -38,4 +38,3 @@ coupleUrls.forEach((url, index) => {
         }
     });
 });
-      
